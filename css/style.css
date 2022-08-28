@@ -13,7 +13,7 @@ body {
   align-items: center;
 }
 
-.container {
+#ex-1 .container {
   transform-style: preserve-3d;
   animation-name: container;
   animation-duration: 15s;
@@ -33,12 +33,11 @@ body {
     transform: rotateY(360deg);
   }
 }
-
-.box {
+#ex-1 .box {
   width: 100px;
   height: 100px;
   border-radius: 16px;
-  background: linear-gradient(45deg, blue, black, white);
+  background: linear-gradient(blue, black, white);
   animation-name: box;
   animation-duration: 1s;
   animation-iteration-count: infinite;
@@ -52,6 +51,39 @@ body {
   to {
     transform: rotateX(180deg);
   }
+}
+
+#ex-2 .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+}
+#ex-2 .container #button-1,
+#ex-2 .container #button-2 {
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+#ex-2 .container #button-1:hover,
+#ex-2 .container #button-2:hover {
+  transform: translateY(-10px);
+}
+@keyframes cards {
+  from {
+    transform: translateX(0) translateY(0);
+  }
+  to {
+    transform: translateX(5px) translateY(-10px);
+  }
+}
+#ex-2 .container #card-1 {
+  animation: cards 1.2s ease infinite alternate;
+}
+#ex-2 .container #card-2 {
+  animation: cards 0.6s ease infinite alternate;
+}
+#ex-2 .container #card-3 {
+  animation: cards 1.2s ease infinite alternate;
 }
 
 /*# sourceMappingURL=style.css.map */
